@@ -4,13 +4,10 @@ using Assets.Scripts.Models.Towers.Behaviors.Attack;
 using Assets.Scripts.Models.Towers.Projectiles.Behaviors;
 using Assets.Scripts.Models.Towers.Weapons.Behaviors;
 using Assets.Scripts.Unity;
-using Assets.Scripts.Unity.Display;
-using BTD_Mod_Helper.Api.Display;
 using BTD_Mod_Helper.Api.Towers;
 using BTD_Mod_Helper.Extensions;
 using static BananaFarmerTower.MainMod;
 using static BananaFarmerTower.Helper;
-using UnityEngine;
 using static BananaFarmerTower.Displays.Towers;
 
 namespace BananaFarmerTower
@@ -19,7 +16,7 @@ namespace BananaFarmerTower
     {
         public class Tier1 : ModUpgrade<BananaFarmer>
         {
-            public override int Path => BOTTOM;
+            public override int Path => BOTTOM; 
             public override int Tier => 1;
             public override string Name => "HelpinHand";
             public override string DisplayName => "Helpin' Hand";
@@ -44,7 +41,7 @@ namespace BananaFarmerTower
             public override int Tier => 2;
             public override string Name => "BananaDealer";
             public override string DisplayName => "Banana Dealer";
-            public override int Cost => 1300;
+            public override int Cost => 900;
             public override string Description => "Farmer produces double the bananas.";
             public override string Icon => "BananaDealer-Icon";
             public override string Portrait => "BananaFarmer-002-Portrait";
@@ -100,7 +97,7 @@ namespace BananaFarmerTower
             public override int Tier => 4;
             public override string Name => "BananaStockTrader";
             public override string DisplayName => "Banana Stonks";
-            public override int Cost => 2700;
+            public override int Cost => 6700;
             public override string Description => "Increases farm and farmer income in range by 50%";
             public override string Icon => "BananaStonks-Icon";
             public override string Portrait => "BananaFarmer-004-Portrait";
@@ -150,7 +147,6 @@ namespace BananaFarmerTower
                 
                 towerModel.AddBehavior(new BonusLivesPerRoundModel("_BonusLivesPerRoundModel", 10, 1f, "eb70b6823aec0644c81f873e94cb26cc"));
                 towerModel.AddBehavior(Game.instance.model.GetTowerFromId("MonkeyVillage-005").GetAttackModel().Duplicate());
-                towerModel.GetBehavior<BananaCentralBuffModel>().multiplier = 2;
             }
         }
     }

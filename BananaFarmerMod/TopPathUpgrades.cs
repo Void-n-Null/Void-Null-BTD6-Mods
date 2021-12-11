@@ -21,7 +21,7 @@ namespace BananaFarmerTower
             public override string Name => "10 ft Pitch Fork";
             public override string DisplayName => "10 ft Pitch Fork";
             public override int Cost => 350;
-            public override string Description => "Increases Farmer's range slightly";
+            public override string Description => "Increase Farmer's range slightly.";
             public override string Icon => "10FtPitchfork-Icon";
             public override string Portrait => "BananaFarmer-Portrait";
 
@@ -39,7 +39,7 @@ namespace BananaFarmerTower
             public override string Name => "BananOcculars";
             public override string DisplayName => "Banan-Occulars";
             public override int Cost => 600;
-            public override string Description => "Increases Farmer's range greatly and allows middle path to see camo.";
+            public override string Description => "Increase Farmer's range greatly. Allows banana gun to see camo.";
             public override string Icon => "BananOculars-Icon";
             public override string Portrait => "BananaFarmer-Portrait";
 
@@ -58,7 +58,7 @@ namespace BananaFarmerTower
             public override string Name => "BananaPhone";
             public override string DisplayName => "Banana Phone";
             public override int Cost => 1500;
-            public override string Description => "Increases farmers range, middle path can now shoot over obstacles.";
+            public override string Description => "Increase farmers range. Allows banana gun to shoot over obstacles.";
             public override string Icon => "BananPhone-Icon";
             public override string Portrait => "BananaFarmer-Portrait";
 
@@ -80,7 +80,7 @@ namespace BananaFarmerTower
             public override string Name => "CyborgFarmer";
             public override string DisplayName => "Cyborg Farmer";
             public override int Cost => 4000;
-            public override string Description => "Partially robotic farmer now has even more range.";
+            public override string Description => "Partially robotic farmer. Has even more range.";
             public override string Icon => "CyborgFarmer-Icon";
             public override string Portrait => "CyborgFarmer-Icon";
 
@@ -108,14 +108,13 @@ namespace BananaFarmerTower
             public override string Name => "Robo Farmer";
             public override string DisplayName => "Robo Farmer";
             public override int Cost => 22000;
-            public override string Description => "Fully Mechanical Farmer. Has infinite banana collection range.";
+            public override string Description => "Fully mechanical farmer. Has infinite banana collection range (and no arms).";
             public override string Icon => "RoboFarmer-Portrait";
             public override string Portrait => "RoboFarmer-Portrait";
 
             public override void ApplyUpgrade(TowerModel towerModel)
             {
                 towerModel.ApplyDisplay<RoboFarmerDisplay>();
-                //towerModel.range = 300;
                 towerModel.GetBehavior<CollectCashZoneModel>().useTowerRange = false;
                 towerModel.GetBehavior<CollectCashZoneModel>().attractRange = float.MaxValue;
                 UpdateAttackModelRange(towerModel);

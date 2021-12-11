@@ -1,11 +1,6 @@
 ﻿using Assets.Scripts.Unity;
 using Assets.Scripts.Unity.Display;
 using BTD_Mod_Helper.Api.Display;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using UnityEngine;
 using static BananaFarmerTower.Helper;
 using static BananaFarmerTower.MainMod;
@@ -21,7 +16,7 @@ namespace BananaFarmerTower
                 public override string BaseDisplay => Generic2dDisplay;
                 public override void ModifyDisplayNode(UnityDisplayNode node)
                 {
-                    Set2DTexture(node, "Bananananananananana");
+                    Set2DTexture(node, "BananaPeel");
                 }
             }
 
@@ -31,7 +26,7 @@ namespace BananaFarmerTower
 
                 public override void ModifyDisplayNode(UnityDisplayNode node)
                 {
-                    Set2DTexture(node, "RottenBananananananananana");
+                    Set2DTexture(node, "RottenBananaPeel");
                 }
             }
 
@@ -41,7 +36,7 @@ namespace BananaFarmerTower
 
                 public override void ModifyDisplayNode(UnityDisplayNode node)
                 {
-                    Set2DTexture(node, "GoldenBanana");
+                    Set2DTexture(node, "GoldenBananaPeel");
                 }
             }
         }

@@ -25,10 +25,11 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
+    <OutputPath>.\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
   </PropertyGroup>
   <PropertyGroup>
     <RunPostBuildEvent>Always</RunPostBuildEvent>
@@ -132,14 +133,6 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resources\BananaDealer-Icon.png" />
-    <EmbeddedResource Include="Resources\SupremeBananaBeing-Icon.png" />
-    <EmbeddedResource Include="Resources\SupremeBananaBeing-Portrait.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Resources\Bananananananananana.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Resources\RottenBananananananananana.png" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resources\RoboFarmer-Portrait.png" />
@@ -165,7 +158,6 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resources\BananaBanker-Icon.png" />
-    <EmbeddedResource Include="Resources\BananaPlantationUpgradeIcon.png" />
     <EmbeddedResource Include="Resources\HelpingHand-Icon.png" />
     <EmbeddedResource Include="Resources\MonkeyWallStreet-Icon.png" />
   </ItemGroup>
@@ -173,16 +165,7 @@
     <EmbeddedResource Include="Resources\BananaStonks-Icon.png" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Resources\Black_Texture.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Resources\BlueHatTexture.png" />
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="Resources\BananaGun-Icon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Resources\SlipperyBananananananananana.png" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resources\BananaFarmer-002-Portrait.png" />
@@ -209,15 +192,18 @@
     <EmbeddedResource Include="Resources\RedHatYellowRim_Texture.png" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Resources\GoldenBanana.png" />
+    <EmbeddedResource Include="Resources\RedHatYellowRim-Portrait.png" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Resources\RedHatYellorRim-Portrait.png" />
+    <EmbeddedResource Include="Resources\BananaPeel.png" />
+    <EmbeddedResource Include="Resources\GoldenBananaPeel.png" />
+    <EmbeddedResource Include="Resources\RottenBananaPeel.png" />
+    <EmbeddedResource Include="Resources\SlipperyBananaPeel.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>
-copy "$(TargetDir)$(TargetFileName)" "D:\Steam\steamapps\common\BloonsTD6\Mods" /y
+    <PostBuildEvent>copy "$(TargetDir)$(TargetFileName)" "D:\Steam\steamapps\common\BloonsTD6\Mods" /y
+copy "$(TargetDir)$(TargetFileName)" "$(ProjectDir)" /y
 D:\Steam\steamapps\common\BloonsTD6\BloonsTD6.exe</PostBuildEvent>
   </PropertyGroup>
   <PropertyGroup>
