@@ -7,6 +7,7 @@ using BTD_Mod_Helper;
 using BTD_Mod_Helper.Api.Towers;
 using BTD_Mod_Helper.Extensions;
 using MelonLoader;
+using System;
 using static BananaFarmerTower.Displays.Towers;
 #endregion
 
@@ -19,6 +20,7 @@ BTD6 Mods & Discussion discord for great and efficient problem solving and debug
 
 [assembly: MelonInfo(typeof(BananaFarmerTower.MainMod), "Banana Farmer Tower", "1.0.0", "Void & Null")]
 [assembly: MelonGame("Ninja Kiwi", "BloonsTD6")]
+[assembly: MelonColor(ConsoleColor.DarkBlue)]
 namespace BananaFarmerTower
 {
 

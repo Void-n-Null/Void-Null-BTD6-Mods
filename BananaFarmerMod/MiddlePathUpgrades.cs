@@ -64,7 +64,7 @@ namespace BananaFarmerTower
             public override string DisplayName => "Sub Banana Gun";
             public override int Cost => 650;
             public override string Description => "Doubles banana fire speed.";
-            public override string Icon => "Bananananananananana";
+            public override string Icon => "BananaPeel";
             public override string Portrait => "RedHat-Portrait";
             public override void ApplyUpgrade(TowerModel towerModel)
             {
@@ -81,7 +81,7 @@ namespace BananaFarmerTower
             public override string DisplayName => "Rotten Bananas";
             public override int Cost => 1200;
             public override string Description => "Bananas now do damage on hit.";
-            public override string Icon => "RottenBananananananananana";
+            public override string Icon => "RottenBananaPeel";
             public override string Portrait => "RedHat-Portrait";
             public override void ApplyUpgrade(TowerModel towerModel)
             {
@@ -118,7 +118,7 @@ namespace BananaFarmerTower
             public override string DisplayName => "Super Slippery Bananas";
             public override int Cost => 45000;
             public override string Description => "Bananas can now affect moabs!";
-            public override string Icon => "SlipperyBananananananananana";
+            public override string Icon => "SlipperyBananaPeel";
             public override string Portrait => "RedHatYellowRim-Portrait";
             public override void ApplyUpgrade(TowerModel towerModel)
             {
