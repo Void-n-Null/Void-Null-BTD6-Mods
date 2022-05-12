@@ -87,7 +87,8 @@ namespace BananaFarmerTower
             {
                 towerModel.ApplyDisplay<BananaGunDisplay>();
                 towerModel.GetAttackModel().weapons[0].projectile.ApplyDisplay<RottenBananaProjectileDisplay>();
-                towerModel.GetAttackModel().weapons[0].projectile.AddBehavior(new DamageModel("DamageModel_", 2, 3, true, true, true, BloonProperties.Frozen | BloonProperties.Lead));
+                towerModel.GetAttackModel().weapons[0].projectile.AddBehavior(new DamageModel("DamageModel_", 2, 3, true, true, true, BloonProperties.Frozen |
+                    BloonProperties.Lead,BloonProperties.Frozen | BloonProperties.Lead));
             }
 
 

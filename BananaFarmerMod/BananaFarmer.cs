@@ -44,7 +44,7 @@ namespace BananaFarmerTower
                 towerModel.RemoveBehavior<AttackModel>();
                 towerModel.GetBehavior<DisplayModel>().display = towerModel.display;
                 towerModel.range = 45;
-                towerModel.AddBehavior(new CollectCashZoneModel("CollectCashZoneModel_", 45, 10, 2, null, true));   
+                towerModel.AddBehavior(new CollectCashZoneModel("CollectCashZoneModel_",45,19,3,"",true,true,true,true));
             }
         }
     }
