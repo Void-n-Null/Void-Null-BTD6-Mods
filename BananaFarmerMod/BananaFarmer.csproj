@@ -7,7 +7,7 @@
     <ProjectGuid>{561A9956-B233-4A83-87E5-D886071BC206}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>BananaFarmerTower</RootNamespace>
+    <RootNamespace>VoidNull</RootNamespace>
     <AssemblyName>BananaFarmerTower</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -38,17 +38,14 @@
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="0Harmony">
-      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\BloonsTD6\btd6-ml-framework\MelonLoader\0Harmony.dll</HintPath>
-      <Private>False</Private>
+    <Reference Include="0Harmony, Version=2.9.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\..\..\MelonLoader\0Harmony.dll</HintPath>
     </Reference>
-    <Reference Include="Assembly-CSharp">
-      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\BloonsTD6\MelonLoader\Managed\Assembly-CSharp.dll</HintPath>
-      <Private>False</Private>
+    <Reference Include="Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\..\..\MelonLoader\Managed\Assembly-CSharp.dll</HintPath>
     </Reference>
-    <Reference Include="BloonsTD6 Mod Helper">
-      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\BloonsTD6\Mods\BloonsTD6 Mod Helper.dll</HintPath>
-      <Private>False</Private>
+    <Reference Include="BloonsTD6 Mod Helper, Version=2.4.8.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\..\..\Mods\BloonsTD6 Mod Helper.dll</HintPath>
     </Reference>
     <Reference Include="Il2Cppmscorlib">
       <HintPath>C:\Program Files (x86)\Steam\steamapps\common\BloonsTD6\MelonLoader\Managed\Il2Cppmscorlib.dll</HintPath>
@@ -78,6 +75,9 @@
       <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\BloonsTD6\btd6-ml-framework\MelonLoader\Managed\UnityEngine.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="UnityEngine, Version=3.7.1.6, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\..\..\BTD-Mod-Helper\Dependencies\BloonsTD6\UnityEngine.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.CoreModule">
       <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\BloonsTD6\btd6-ml-framework\MelonLoader\Managed\UnityEngine.CoreModule.dll</HintPath>
       <Private>False</Private>
@@ -86,19 +86,23 @@
       <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\BloonsTD6\btd6-ml-framework\MelonLoader\Managed\UnityEngine.Il2CppImageConversionManager.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="UnityEngine.Il2CppImageConversionManager, Version=0.3.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\..\..\BTD-Mod-Helper\Dependencies\BloonsTD6\UnityEngine.Il2CppImageConversionManager.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.ImageConversionModule">
       <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\BloonsTD6\btd6-ml-framework\MelonLoader\Managed\UnityEngine.ImageConversionModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BananaFarmer.cs" />
-    <Compile Include="Displays.cs" />
+    <Compile Include="BananaFarmer\BananaFarmer.cs" />
+    <Compile Include="BananaFarmer\Displays.cs" />
+    <Compile Include="BananaFarmer\Upgrades\BottomPathUpgrades.cs" />
+    <Compile Include="BananaFarmer\Upgrades\MiddlePathUpgrades.cs" />
+    <Compile Include="BananaFarmer\Upgrades\ParagonUpgrade.cs" />
+    <Compile Include="BananaFarmer\Upgrades\TopPathUpgrades.cs" />
     <Compile Include="Helper.cs" />
-    <Compile Include="ParagonUpgrade.cs" />
-    <Compile Include="BottomPathUpgrades.cs" />
-    <Compile Include="MiddlePathUpgrades.cs" />
-    <Compile Include="TopPathUpgrades.cs" />
+    <Compile Include="MainMod.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

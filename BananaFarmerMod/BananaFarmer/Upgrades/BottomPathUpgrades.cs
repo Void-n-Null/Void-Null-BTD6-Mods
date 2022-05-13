@@ -6,9 +6,8 @@ using Assets.Scripts.Models.Towers.Weapons.Behaviors;
 using Assets.Scripts.Unity;
 using BTD_Mod_Helper.Api.Towers;
 using BTD_Mod_Helper.Extensions;
-using static BananaFarmerTower.TowerAgents.BananaFarmer.Displays.Towers;
 
-namespace BananaFarmerTower.TowerAgents.BananaFarmer.Upgrades
+namespace VoidNull.BananaFarmer.Upgrades
 {
     public class BottomPathUpgrades
     {
@@ -45,15 +44,15 @@ namespace BananaFarmerTower.TowerAgents.BananaFarmer.Upgrades
             public override string Portrait => "BananaFarmer-002-Portrait";
             public override void ApplyUpgrade(TowerModel towerModel)
             {
-                towerModel.ApplyDisplay<BananaDealerDisplay>();
-                AttackModel BananaFarmAttackModel = default;
+                towerModel.ApplyDisplay<Displays.TowerDisplays.BananaDealerDisplay>();
+                AttackModel bananaFarmAttackModel = default;
                 foreach (var attackModel in towerModel.GetAttackModels())
                 {
                     if (!attackModel.name.Equals("BananaFarm_"))
                         continue;
-                    BananaFarmAttackModel = attackModel;
+                    bananaFarmAttackModel = attackModel;
                 }
-                BananaFarmAttackModel.weapons[0].GetBehavior<EmissionsPerRoundFilterModel>().count = 12;
+                bananaFarmAttackModel.weapons[0].GetBehavior<EmissionsPerRoundFilterModel>().count = 12;
             }
 
 
@@ -72,18 +71,18 @@ namespace BananaFarmerTower.TowerAgents.BananaFarmer.Upgrades
             public override void ApplyUpgrade(TowerModel towerModel)
             {
                 towerModel.AddBehavior(new MonkeyCityIncomeSupportModel("_MonkeyCityIncomeSupport", true, 1.15f, null, "MonkeyCityBuff", "BuffIconVillagexx4"));
-                towerModel.ApplyDisplay<BananaBankerDisplay>();
-                AttackModel BananaFarmAttackModel = default;
+                towerModel.ApplyDisplay<Displays.TowerDisplays.BananaBankerDisplay>();
+                AttackModel bananaFarmAttackModel = default;
                 foreach (var attackModel in towerModel.GetAttackModels())
                 {
                     if (!attackModel.name.Equals("BananaFarm_"))
                         continue;
-                    BananaFarmAttackModel = attackModel;
+                    bananaFarmAttackModel = attackModel;
                         break;
                 }
-                BananaFarmAttackModel.weapons[0].GetBehavior<EmissionsPerRoundFilterModel>().count = 10;
-                BananaFarmAttackModel.weapons[0].projectile.GetBehavior<CashModel>().maximum = 40;
-                BananaFarmAttackModel.weapons[0].projectile.GetBehavior<CashModel>().minimum = 40;
+                bananaFarmAttackModel.weapons[0].GetBehavior<EmissionsPerRoundFilterModel>().count = 10;
+                bananaFarmAttackModel.weapons[0].projectile.GetBehavior<CashModel>().maximum = 40;
+                bananaFarmAttackModel.weapons[0].projectile.GetBehavior<CashModel>().minimum = 40;
 
             }
 
@@ -102,7 +101,7 @@ namespace BananaFarmerTower.TowerAgents.BananaFarmer.Upgrades
             public override void ApplyUpgrade(TowerModel towerModel)
             {
                 towerModel.GetBehavior<MonkeyCityIncomeSupportModel>().incomeModifier = 1.5f;
-                towerModel.ApplyDisplay<BananaStonksDisplay>();
+                towerModel.ApplyDisplay<Displays.TowerDisplays.BananaStonksDisplay>();
                 AttackModel BananaFarmAttackModel = default;
                 foreach (var attackModel in towerModel.GetAttackModels())
                 {
@@ -131,7 +130,7 @@ namespace BananaFarmerTower.TowerAgents.BananaFarmer.Upgrades
             public override void ApplyUpgrade(TowerModel towerModel)
             {
                 towerModel.GetBehavior<MonkeyCityIncomeSupportModel>().incomeModifier = 3f;
-                towerModel.ApplyDisplay<MonkeyWallStreetDisplay>();
+                towerModel.ApplyDisplay<Displays.TowerDisplays.MonkeyWallStreetDisplay>();
                 AttackModel BananaFarmAttackModel = default;
                 foreach (var attackModel in towerModel.GetAttackModels())
                 {

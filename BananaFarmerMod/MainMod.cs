@@ -1,9 +1,9 @@
 ﻿#region imports
 
 using System;
-using BananaFarmerTower.TowerAgents;
 using BTD_Mod_Helper;
 using MelonLoader;
+using VoidNull;
 
 #endregion
 
@@ -17,10 +17,10 @@ BTD6 Mods & Discussion discord for great and efficient problem solving and debug
 [assembly: MelonInfo(typeof(MainMod), "Agent Towers", "1.0.0", "Void & Null")]
 [assembly: MelonGame("Ninja Kiwi", "BloonsTD6")]
 [assembly: MelonColor(ConsoleColor.DarkBlue)]
-namespace BananaFarmerTower.TowerAgents
+namespace VoidNull
 {
     public class MainMod : BloonsTD6Mod
     {
-
+        
     }
 }

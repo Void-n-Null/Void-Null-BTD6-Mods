@@ -7,10 +7,9 @@ using BTD_Mod_Helper.Api.Display;
 using BTD_Mod_Helper.Api.Towers;
 using BTD_Mod_Helper.Extensions;
 using UnityEngine;
-using static BananaFarmerTower.MainMod;
-using static BananaFarmerTower.Helper;
+using static VoidNull.Helper;
 
-namespace BananaFarmerTower
+namespace VoidNull.BananaFarmer.Upgrades
 {
     public class TopPathUpgrades
     {

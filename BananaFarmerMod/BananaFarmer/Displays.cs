@@ -2,14 +2,13 @@
 using Assets.Scripts.Unity.Display;
 using BTD_Mod_Helper.Api.Display;
 using UnityEngine;
-using static BananaFarmerTower.Helper;
-using static BananaFarmerTower.MainMod;
+using static VoidNull.Helper;
 
-namespace BananaFarmerTower
+namespace VoidNull.BananaFarmer
 {
     public class Displays
     {
-        public class Projectiles
+        public class ProjectileDisplays
         {
             public class BaseBananaProjectileDisplay : ModDisplay
             {
@@ -41,7 +40,7 @@ namespace BananaFarmerTower
             }
         }
 
-        public class Towers
+        public class TowerDisplays
         {
 
             public class BaseFarmerDisplay : ModDisplay
@@ -62,11 +61,11 @@ namespace BananaFarmerTower
                 public override void ModifyDisplayNode(UnityDisplayNode node)
                 {
                     foreach (Renderer genericRenderer in node.genericRenderers)
-                        genericRenderer.material.mainTexture = (Texture)this.GetTexture("Paragon_Texture");
+                        genericRenderer.material.mainTexture = GetTexture("Paragon_Texture");
                 }
             }
 
-            public class BananaGunDisplay : ModDisplay
+            public  class BananaGunDisplay : ModDisplay
             {
                 public override string BaseDisplay => BananaFarmerDisplay;
                 public override void ModifyDisplayNode(UnityDisplayNode node)
@@ -75,7 +74,7 @@ namespace BananaFarmerTower
                 }
             }
 
-            public class SlipperyBananaDisplay : ModDisplay
+            public  class SlipperyBananaDisplay : ModDisplay
             {
                 public override string BaseDisplay => BananaFarmerDisplay;
                 public override void ModifyDisplayNode(UnityDisplayNode node)
@@ -84,7 +83,7 @@ namespace BananaFarmerTower
                 }
             }
 
-            public class BananaDealerDisplay : ModDisplay
+            public  class BananaDealerDisplay : ModDisplay
             {
                 public override string BaseDisplay => BananaFarmerDisplay;
                 public override void ModifyDisplayNode(UnityDisplayNode node)
@@ -94,7 +93,7 @@ namespace BananaFarmerTower
                 }
             }
 
-            public class BananaBankerDisplay : ModDisplay
+            public  class BananaBankerDisplay : ModDisplay
             {
                 public override string BaseDisplay => BananaFarmerDisplay;
                 public override void ModifyDisplayNode(UnityDisplayNode node)
@@ -105,7 +104,7 @@ namespace BananaFarmerTower
                 }
             }
 
-            public class BananaStonksDisplay : ModDisplay
+            public  class BananaStonksDisplay : ModDisplay
             {
                 public override string BaseDisplay => BananaFarmerDisplay;
                 public override void ModifyDisplayNode(UnityDisplayNode node)
@@ -116,12 +115,12 @@ namespace BananaFarmerTower
                 }
             }
 
-            public class MonkeyWallStreetDisplay : ModDisplay
+            public  class MonkeyWallStreetDisplay : ModDisplay
             {
                 public override string BaseDisplay => BananaFarmerDisplay;
                 public override void ModifyDisplayNode(UnityDisplayNode node)
                 {
-                    foreach (Renderer genericRenderer in node.genericRenderers)
+                    foreach (var genericRenderer in node.genericRenderers)
                         genericRenderer.material.mainTexture = GetTexture("Suit_Texture");
                     UpdateHatTexture(node, GetTexture("MonkeyWallStreetHat_Texture"));
                 }

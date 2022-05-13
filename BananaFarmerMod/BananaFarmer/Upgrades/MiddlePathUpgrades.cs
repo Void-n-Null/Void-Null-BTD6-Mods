@@ -6,10 +6,8 @@ using Assets.Scripts.Models.Towers.Weapons;
 using Assets.Scripts.Unity;
 using BTD_Mod_Helper.Api.Towers;
 using BTD_Mod_Helper.Extensions;
-using static BananaFarmerTower.TowerAgents.BananaFarmer.Displays.Projectiles;
-using static BananaFarmerTower.TowerAgents.BananaFarmer.Displays.Towers;
-
-namespace BananaFarmerTower.TowerAgents.BananaFarmer.Upgrades
+using static VoidNull.BananaFarmer.Displays;
+namespace VoidNull.BananaFarmer.Upgrades
 {
 
 
@@ -28,7 +26,7 @@ namespace BananaFarmerTower.TowerAgents.BananaFarmer.Upgrades
             public override void ApplyUpgrade(TowerModel towerModel)
             {
 
-                towerModel.ApplyDisplay<BananaGunDisplay>();
+                towerModel.ApplyDisplay<TowerDisplays.BananaGunDisplay>();
                 var BananaGun = Game.instance.model.GetTowerFromId("SpikeFactory").GetAttackModel().Duplicate();
                 WeaponModel GunWeaponModel = BananaGun.weapons[0];
                 ProjectileModel projectileModel = BananaGun.weapons[0].projectile;
@@ -45,7 +43,7 @@ namespace BananaFarmerTower.TowerAgents.BananaFarmer.Upgrades
                 projectileModel.RemoveBehavior<SetSpriteFromPierceModel>();
                 projectileModel.pierce = 1;
                 projectileModel.GetBehavior<ArriveAtTargetModel>().timeToTake = .45f;
-                projectileModel.ApplyDisplay<BaseBananaProjectileDisplay>();
+                projectileModel.ApplyDisplay<ProjectileDisplays.BaseBananaProjectileDisplay>();
                 towerModel.AddBehavior(BananaGun);
             }
 
@@ -65,7 +63,7 @@ namespace BananaFarmerTower.TowerAgents.BananaFarmer.Upgrades
             public override string Portrait => "RedHat-Portrait";
             public override void ApplyUpgrade(TowerModel towerModel)
             {
-                towerModel.ApplyDisplay<BananaGunDisplay>();
+                towerModel.ApplyDisplay<TowerDisplays.BananaGunDisplay>();
                 towerModel.GetAttackModel().weapons[0].rate = 0.875f;
                 towerModel.GetAttackModel().weapons[0].projectile.GetBehavior<ArriveAtTargetModel>().timeToTake = .25f;
             }
@@ -82,9 +80,10 @@ namespace BananaFarmerTower.TowerAgents.BananaFarmer.Upgrades
             public override string Portrait => "RedHat-Portrait";
             public override void ApplyUpgrade(TowerModel towerModel)
             {
-                towerModel.ApplyDisplay<BananaGunDisplay>();
-                towerModel.GetAttackModel().weapons[0].projectile.ApplyDisplay<RottenBananaProjectileDisplay>();
-                towerModel.GetAttackModel().weapons[0].projectile.AddBehavior(new DamageModel("DamageModel_", 2, 3, true, true, true, BloonProperties.Lead | BloonProperties.Frozen));
+                towerModel.ApplyDisplay<TowerDisplays.BananaGunDisplay>();
+                towerModel.GetAttackModel().weapons[0].projectile.ApplyDisplay<ProjectileDisplays.RottenBananaProjectileDisplay>();
+                towerModel.GetAttackModel().weapons[0].projectile.AddBehavior(new DamageModel("DamageModel_", 2, 3, true, true, true, BloonProperties.Frozen |
+                    BloonProperties.Lead,BloonProperties.Frozen | BloonProperties.Lead));
             }
 
 
@@ -101,7 +100,7 @@ namespace BananaFarmerTower.TowerAgents.BananaFarmer.Upgrades
             public override string Portrait => "RedHat-Portrait";
             public override void ApplyUpgrade(TowerModel towerModel)
             {
-                towerModel.ApplyDisplay<BananaGunDisplay>();
+                towerModel.ApplyDisplay<TowerDisplays.BananaGunDisplay>();
                 towerModel.GetAttackModel().weapons[0].rate = 1.75f / 4f;
                 towerModel.GetAttackModel().weapons[0].projectile.GetBehavior<ArriveAtTargetModel>().timeToTake = .15f;
 
@@ -119,7 +118,7 @@ namespace BananaFarmerTower.TowerAgents.BananaFarmer.Upgrades
             public override string Portrait => "RedHatYellowRim-Portrait";
             public override void ApplyUpgrade(TowerModel towerModel)
             {
-                towerModel.ApplyDisplay<SlipperyBananaDisplay>();
+                towerModel.ApplyDisplay<TowerDisplays.SlipperyBananaDisplay>();
                 towerModel.GetAttackModel().weapons[0].projectile.GetBehavior<ArriveAtTargetModel>().timeToTake = .13f;
                 towerModel.GetAttackModel().weapons[0].projectile.GetBehavior<WindModel>().affectMoab = true;
             }
