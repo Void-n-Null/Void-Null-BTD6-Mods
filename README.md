@@ -11,7 +11,7 @@ Mods made by Void & Null for Bloons Tower Defence 6
             Adds the Banana Farmer Agent as a usable tower in the game.
         </td>
         <td width="40%">
-            <a href="https://github.com/Void-n-Null/Void-Null-BTD6-Mods/releases/download/v1/BananaFarmerTower_v2.dll"><img alt="Download" src="https://github.com/Void-n-Null/Void-Null-BTD6-Mods/blob/master/DownloadButton.png?raw=true"></a>
+            <a href="https://github.com/Void-n-Null/Void-Null-BTD6-Mods/raw/master/BananaFarmerMod/BananaFarmerTower.dll"><img alt="Download" src="https://github.com/Void-n-Null/Void-Null-BTD6-Mods/blob/master/DownloadButton.png?raw=true"></a>
         </td>
     </tr>
     <tr>
