@@ -39,7 +39,7 @@ namespace VoidNull.BananaFarmer.Upgrades
                 BananaGun.AddBehavior(new RotateToTargetModel("RotateToTargetModel_", true, true, true, 0, true, true));
                 GunWeaponModel.fireWithoutTarget = false;
                 projectileModel.RemoveBehavior<DamageModel>();
-                projectileModel.AddBehavior(new WindModel("WindModel_", 0, 200, 100, false, null, 0));
+                projectileModel.AddBehavior(new WindModel("WindModel_", 0, 200, 100, false, null, 0,null,1));
                 projectileModel.RemoveBehavior<SetSpriteFromPierceModel>();
                 projectileModel.pierce = 1;
                 projectileModel.GetBehavior<ArriveAtTargetModel>().timeToTake = .45f;
@@ -95,7 +95,7 @@ namespace VoidNull.BananaFarmer.Upgrades
             public override string Name => "PotassiumSpeed";
             public override string DisplayName => "Potassium Speed";
             public override int Cost => 5000;
-            public override string Description => "Doubles banana fire speed again.";
+            public override string Description => "Doubles banana fire speed and makes Bloons travel backwards 2/3 as fast.";
             public override string Icon => "BananaSight-Icon";
             public override string Portrait => "RedHat-Portrait";
             public override void ApplyUpgrade(TowerModel towerModel)
@@ -103,7 +103,7 @@ namespace VoidNull.BananaFarmer.Upgrades
                 towerModel.ApplyDisplay<TowerDisplays.BananaGunDisplay>();
                 towerModel.GetAttackModel().weapons[0].rate = 1.75f / 4f;
                 towerModel.GetAttackModel().weapons[0].projectile.GetBehavior<ArriveAtTargetModel>().timeToTake = .15f;
-
+                towerModel.GetAttackModel().weapons[0].projectile.GetBehavior<WindModel>().speedMultiplier = 0.75f;
             }
         }
         public class Tier5 : ModUpgrade<BananaFarmer>
