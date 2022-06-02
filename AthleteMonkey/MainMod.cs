@@ -14,7 +14,7 @@ Kosmic#4494 on Discord for some great sprite work,
 BTD6 Mods & Discussion discord for great and efficient problem solving and debugging (https://discord.gg/dV682SPepR)
 */
 
-[assembly: MelonInfo(typeof(MainMod), "Agent Towers", "1.0.0", "Void & Null")]
+[assembly: MelonInfo(typeof(MainMod), "Athlete Monkey", "1.0.0", "Void & Null")]
 [assembly: MelonGame("Ninja Kiwi", "BloonsTD6")]
 [assembly: MelonColor(ConsoleColor.DarkBlue)]
 namespace VoidNull

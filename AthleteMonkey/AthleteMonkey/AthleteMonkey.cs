@@ -13,11 +13,11 @@ namespace VoidNull.AthleteMonkey
 {
     public class AthleteMonkey : ModTower
     {
-        public override string Name => "Athlete Monkey";
+        public override string Name => "AthleteMonkey";
         public override string TowerSet => "Support";
         public override string BaseTower => TowerType.DartMonkey;
         public override int Cost => 1900;
-        public override string Description => "Collects bananas from Athlete Farms.";
+        public override string Description => "He's got drive, He's got power, He stays hungry (for bananas)";
         public override string DisplayName => "Athlete Monkey";
         public override int TopPathUpgrades =>5;
         public override int MiddlePathUpgrades =>5;
@@ -26,6 +26,7 @@ namespace VoidNull.AthleteMonkey
         public override void ModifyBaseTowerModel(TowerModel towerModel)
         {
             towerModel.ApplyDisplay<Displays.TowerDisplays.BaseMonkeyDisplay>();
+            towerModel.GetWeapon().projectile.ApplyDisplay<Displays.ProjectileDisplays.Baseketball>();
         }
     }
 }
